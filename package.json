@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/audreee/shop-local.git"
+    "url": "git+https://github.com/audreee/react-webpack-setup.git"
   },
   "keywords": [],
   "author": "Audree Steinberg",
   "license": "ISC",
-  "homepage": "https://github.com/audreee/shop-local#readme",
+  "homepage": "https://github.com/audreee/react-webpack-setup#readme",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
