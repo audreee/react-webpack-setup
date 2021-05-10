@@ -12,5 +12,5 @@ This repo sets up a basic full-stack application with an Express server back-end
   - Repository
   - Author
   - Homepage
-- Run the "react-dev" script to build the application using webpack. Webpack is configured with watch to re-compile as you save changes
-- Run the "start" script to run the Express server on localhost:3000. This repo uses nodemon to refresh the server as you save changes
+- Run the "build-dev" script to build the application using webpack. Webpack is configured with watch to re-compile as you save changes
+- Run the "build-start" script to run the Express server on localhost:3000. This repo uses nodemon to refresh the server as you save changes
