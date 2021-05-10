@@ -6,7 +6,6 @@ module.exports = {
     path: path.join(__dirname, './client/dist'),
     filename: 'bundle.js',
   },
-  mode: 'development',
   module: {
     rules: [
       {
@@ -15,26 +14,27 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react',  {
-               plugins: ['@babel/plugin-proposal-class-properties'],
-              },
-            ],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
-          { loader: 'style-loader' },
           {
-            loader: 'css-loader',
+            loader: 'file-loader',
             options: {
-              modules: true,
-            },
-          },
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'static/img',
+              esModule: false,
+            }
+          }
         ],
       },
     ],
   },
-  watch: true
 };
